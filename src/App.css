@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Dosis');
+
+body {
+  background-color:#eefc3a;  
+  text-align: center;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-family :  Share Tech Mono;
+} 
+
+h2 {
+  font-family :  Share Tech Mono;
+}
+
+h3 {
+  font-family :  Share Tech Mono;
+}
+
+h4 {
+  font-family :  Share Tech Mono;
+} 
+
+ 
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color:  #494745;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
