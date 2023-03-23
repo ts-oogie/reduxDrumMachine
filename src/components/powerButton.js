@@ -4,7 +4,7 @@ const buttonStyle = {
     width: "70px",
     border: "4px solid black",
     height: "30px",
-    borderRadius: "10px"
+    borderRadius: "10px" 
 }
 
 const onOffStyle = {
@@ -31,20 +31,23 @@ const PowerButton = () => {
     }
 
     return(
-        <>
-        <h4>ON/OFF</h4>
+        <> 
         <div className="power-button" style={buttonStyle}> 
             <div className="on-off" style={onOffStyle} onClick={toggleBtn}></div>
         </div>
+        <h4>ON/OFF</h4>
         </>
     )
 }
 
 const BankButton = () => {
     return(
+        <> 
         <div className="bank-button" style={bankStyle}>
             <div className="on-off" style={onOffStyle}></div>
         </div>
+        <h4>Bank</h4>
+        </>
     )
 }
 

@@ -1,6 +1,6 @@
 const PadBtn = ({label}) => { 
     return(
-        <div className="padbtn">{label}</div>
+        <div className="padbtn"><h1>{label}</h1></div>
     )
 }
 

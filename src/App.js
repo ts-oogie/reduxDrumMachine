@@ -40,10 +40,10 @@ function App() {
       <div id="drum-machine" style={dmStyle}>
       <h1>Redux Machine</h1>
         <div id="pad-display" style={padStyle}>
-           <PadGrid />
+          <PadGrid />
         </div>
         <div id="controls-display" style={controlStyle}>
-            <ControlGrid />
+          <ControlGrid />
         </div>
       </div>
     </div>

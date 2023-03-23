@@ -15,9 +15,12 @@ function Slider() {
     }   
 
     return (
+        <>
         <section className="slidecontainer" style={slideContainerStyle}>
             <input type="range" min="1" max="100" value={inputVal} className="slider" id="myRange" onInput={getVal} />
         </section>
+        <h4>Volume</h4>
+        </>
     )
 }
 
