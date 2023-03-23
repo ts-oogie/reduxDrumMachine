@@ -30,7 +30,8 @@ const controlStyle = {
   height: thisHeight,
   position: "relative",
   float: "right",
-  backgroundColor : "white"
+  backgroundColor : "white",
+  borderRadius: "20px"
 }
 
 function App() {  

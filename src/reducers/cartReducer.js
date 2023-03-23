@@ -1,22 +1,35 @@
-import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes";
+import { PLAY_KEY, CHANGE_VOLUME, SELECT_BANK, TOGGLE_POWER } from "../actionTypes/actionTypes";
 
 const initialState = {
-  numOfItems: 0,
-};
+  bank : 1,
+  volume : 50, 
+  key : null,
+  power : "on"
+}
 
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_ITEM:
+    case PLAY_KEY :
       return {
         ...state,
-        numOfItems: state.numOfItems + 1,
-      };
+        key: action.key
+      }  
+    case CHANGE_VOLUME : 
+      return {
+        ...state,
+        volume: action.volume
+      }
+    case SELECT_BANK : 
+    return {
+      ...state,
+      bank: action.bank
+    }
+    case TOGGLE_POWER : 
+    return {
+      ...state,
+      power : action.power
+    }
 
-    case DELETE_ITEM:
-      return {
-        ...state,
-        numOfItems: state.numOfItems - 1,
-      };
     default:
       return state;
   }

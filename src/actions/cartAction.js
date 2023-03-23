@@ -1,15 +1,31 @@
-import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes";
+import { PLAY_KEY, CHANGE_VOLUME, SELECT_BANK, TOGGLE_POWER } from "../actionTypes/actionTypes";
 
-const addItem = () => {
+const changeVolume = (value) => {
   return {
-    type: ADD_ITEM,
-  };
-};
+    type: CHANGE_VOLUME,
+    volume: value
+  }
+}
 
-const deleteItem = () => {
+const playKey = (key) => {
   return {
-    type: DELETE_ITEM,
-  };
-};
+    type: PLAY_KEY,
+    key: key
+  } 
+}
 
-export { addItem, deleteItem };
+const selectBank = (bank) => {
+  return {
+    type: SELECT_BANK,
+    bank: bank
+  }
+} 
+
+const togglePower = (val) => {
+  return {
+    type: TOGGLE_POWER,
+    power : val
+  }
+}
+
+export { playKey, changeVolume, selectBank };
