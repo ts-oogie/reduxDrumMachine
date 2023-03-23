@@ -1,9 +1,9 @@
- 
 import './scss/dmStyle.scss';
 import { Provider } from "react-redux"
 import store from "./store" 
 import PadGrid from './components/padGrid'
-import Logo  from './toshiLogo.png'
+import ControlGrid from './components/controlGrid'
+
  
 const dmStyle = {
   width : "50%",
@@ -35,16 +35,16 @@ const controlStyle = {
 
 function App() {  
   return (
-    <Provider store={store}>
-     
-    <div className="App">  
-     <img src={Logo} />
+    <Provider store={store}> 
+    <div className="App">   
       <div id="drum-machine" style={dmStyle}>
       <h1>Redux Machine</h1>
         <div id="pad-display" style={padStyle}>
            <PadGrid />
         </div>
-        <div id="controls-display" style={controlStyle}>s</div>
+        <div id="controls-display" style={controlStyle}>
+            <ControlGrid />
+        </div>
       </div>
     </div>
     </Provider>
