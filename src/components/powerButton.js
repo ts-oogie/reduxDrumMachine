@@ -1,10 +1,14 @@
- import {useState, useEffect} from 'react' 
+import {useState, useEffect} from 'react' 
+import {togglePower} from '../actions/cartAction'
+import { useSelector } from "react-redux"
 
+const PowerButton = ({dispatch}) => { 
 
-const PowerButton = () => { 
-
-    const [power, setPower] = useState("on") 
-    const [float, setFloat] = useState("left")
+    const state = useSelector((state) => state)
+ 
+    const [float, setFloat] = useState("left") //change css settings based on state.power
+                                                //if state.power == "on", then make button float right
+                                                //if state.power == "off", then make button float left
 
     const buttonStyle = {
         width: "70px",
@@ -23,20 +27,21 @@ const PowerButton = () => {
     }
 
     const toggleBtn = () => { 
-        if(power == "on"){
-            setPower("off")
+        if(state.power == "on"){ 
+            dispatch(togglePower("off"))
         }
-        else if(power == "off"){
-            setPower("on")
-        } 
+        else if(state.power == "off"){ 
+            dispatch(togglePower("on"))
+        }  
     } 
     
     useEffect(()=>{
-        if(power == "on"){
-            setFloat("left")
-        }
-        else if(power == "off"){
+        console.log("State : " + state)
+        if(state.power == "on"){
             setFloat("right")
+        }
+        else if(state.power == "off"){
+            setFloat("left")
         }
     })
     
@@ -45,7 +50,7 @@ const PowerButton = () => {
         <div className="power-button" style={buttonStyle} onClick={toggleBtn}> 
             <div className="on-off" style={onOffStyle} ></div>
         </div>
-        <h4>Power : {power}</h4>
+        <h4>Power : {state.power}</h4>
         </>
     )
 }

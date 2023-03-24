@@ -28,4 +28,4 @@ const togglePower = (val) => {
   }
 }
 
-export { playKey, changeVolume, selectBank };
+export { playKey, changeVolume, selectBank, togglePower };

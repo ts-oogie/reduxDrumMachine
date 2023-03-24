@@ -27,7 +27,7 @@ const cartReducer = (state = initialState, action) => {
     case TOGGLE_POWER : 
     return {
       ...state,
-      power : action.power
+      power: action.power
     }
 
     default:
