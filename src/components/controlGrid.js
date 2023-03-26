@@ -2,7 +2,7 @@ import Logo  from '../circleSymbol.jpg'
 import {PowerButton, BankButton } from './powerButton'
 import Slider from './slider'
 
-const ControlGrid = ({dispatch}) => {
+const ControlGrid = () => {
 
     const ctlGridStyle = {
         minWidth : "100%", 
@@ -37,7 +37,7 @@ const ControlGrid = ({dispatch}) => {
         <img src={Logo} style={logoStyle}/> 
         <div className="row" style={containerStyle}>  
             <div className="flex-container" style={ctlGridStyle}>
-                 <PowerButton dispatch={dispatch}/>
+                 <PowerButton />
             </div>
             <div className="flex-container" style={ctlGridStyle}>
                 <Slider />

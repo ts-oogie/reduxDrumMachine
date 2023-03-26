@@ -16,18 +16,22 @@ html {
 h1 {
   font-family :  Share Tech Mono;
   color: white;
+  user-select: none;
 } 
 
 h2 {
   font-family :  Share Tech Mono;
+  user-select: none;
 }
 
 h3 {
   font-family :  Share Tech Mono;
+  user-select: none;
 }
 
 h4 {
   font-family :  Share Tech Mono;
+  user-select: none;
 }  
  
  #drum-machine {
@@ -59,10 +63,35 @@ h4 {
 
  .padbtn {
   height: 50px;
+  cursor: pointer; /* Cursor on hover */
+  transition: transform .1s;
+ }
+
+ .padbtn:active {
+  transform: scale(1.1);
  }
 
  .padbtn h1 {
   color : black;
+  user-select: none;
+ }
+
+ #display {
+  background-color : #eefc3a; 
+  width : 220px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top : -70px;
+  margin-bottom : 50px;
+  border: 3px black solid;
+  border-radius: 10px; 
+  height: 40px;
+  box-shadow: 10px 10px lightblue;
+ }
+
+ #display h4 {
+  margin-top: 3px;
+  display : block; 
  }
 
  .slider {
@@ -75,6 +104,7 @@ h4 {
   -webkit-transition: .2s;
   transition: opacity .2s;
   margin-top : 25px;
+  
 }
 
 .slider:hover {

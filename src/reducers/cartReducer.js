@@ -3,7 +3,7 @@ import { PLAY_KEY, CHANGE_VOLUME, SELECT_BANK, TOGGLE_POWER } from "../actionTyp
 const initialState = {
   bank : 1,
   volume : 50, 
-  key : null,
+  key : "",
   power : "on"
 }
 

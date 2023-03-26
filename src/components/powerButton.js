@@ -1,10 +1,11 @@
 import {useState, useEffect} from 'react' 
-import {togglePower} from '../actions/cartAction'
-import { useSelector } from "react-redux"
+import {togglePower, selectBank} from '../actions/cartAction'
+import { useSelector, useDispatch } from "react-redux"
 
-const PowerButton = ({dispatch}) => { 
+const PowerButton = () => { 
 
     const state = useSelector((state) => state)
+    const dispatch = useDispatch()
  
     const [float, setFloat] = useState("left") //change css settings based on state.power
                                                 //if state.power == "on", then make button float right
@@ -23,7 +24,8 @@ const PowerButton = ({dispatch}) => {
         backgroundColor: "black",
         float: float,
         cursor: "pointer",
-        marginTop : "-1px"
+        marginTop : "-1px",
+        marginRight: "-1px"
     }
 
     const toggleBtn = () => { 
@@ -35,8 +37,7 @@ const PowerButton = ({dispatch}) => {
         }  
     } 
     
-    useEffect(()=>{
-        console.log("State : " + state)
+    useEffect(()=>{ 
         if(state.power == "on"){
             setFloat("right")
         }
@@ -57,7 +58,10 @@ const PowerButton = ({dispatch}) => {
 
 const BankButton = () => {
 
-    const [bank, setBank] = useState(1) 
+    const state = useSelector((state)=>state)
+    const dispatch = useDispatch()
+
+    //const [bank, setBank] = useState(1) - removed... added state object
     const [float, setFloat] = useState("left")
 
     const bankStyle = {
@@ -76,7 +80,7 @@ const BankButton = () => {
     }
 
     useEffect(()=>{
-        if(bank == 1){
+        if(state.bank == 1){
             setFloat("left")
         }
         else{
@@ -85,11 +89,11 @@ const BankButton = () => {
     })
 
     const toggleBank = () => { 
-        if(bank == 1){
-            setBank(2)
+        if(state.bank == 1){ 
+            dispatch(selectBank(2))
         }
         else{
-            setBank(1)
+            dispatch(selectBank(1))
         }
     }
 
@@ -98,7 +102,7 @@ const BankButton = () => {
         <div className="bank-button" style={bankStyle} onClick={toggleBank}>
             <div className="on-off" style={onOffStyle}></div>
         </div>
-        <h4>Bank : {bank}</h4>
+        <h4>Bank : {state.bank}</h4>
         </>
     )
 }

@@ -1,15 +1,13 @@
 import './scss/dmStyle.scss';
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import { useEffect } from 'react'
  
 import PadGrid from './components/padGrid'
 import ControlGrid from './components/controlGrid'
  
-
 function App() {   
 
-  const state = useSelector((state) => state)
-  const dispatch = useDispatch()
+  const state = useSelector((state) => state) 
 
   const dmStyle = {
     width : "50%",
@@ -43,12 +41,12 @@ function App() {
   return ( 
     <div className="App">   
       <div id="drum-machine" style={dmStyle}>
-      <h1>Redux Machine</h1>
+      <h1>Redux-Drum </h1>
         <div id="pad-display" style={padStyle}>
           <PadGrid />
         </div>
         <div id="controls-display" style={controlStyle}>
-          <ControlGrid dispatch={dispatch}/>
+          <ControlGrid />
         </div>
       </div>
     </div> 

@@ -25,7 +25,11 @@ h4 {
   font-family :  Share Tech Mono;
 } 
 
- 
+ #display {
+  background-color : grey;
+  height: 20px;
+  display: block;
+ }
 
 .App-logo {
   height: 40vmin;
