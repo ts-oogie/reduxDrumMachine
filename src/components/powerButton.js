@@ -29,22 +29,22 @@ const PowerButton = () => {
     }
 
     const toggleBtn = () => { 
-        if(state.power == "on"){ 
+        if(state.power === "on"){ 
             dispatch(togglePower("off"))
         }
-        else if(state.power == "off"){ 
+        else if(state.power === "off"){ 
             dispatch(togglePower("on"))
         }  
     } 
     
     useEffect(()=>{ 
-        if(state.power == "on"){
+        if(state.power === "on"){
             setFloat("right")
         }
-        else if(state.power == "off"){
+        else if(state.power === "off"){
             setFloat("left")
         }
-    })
+    }, [state.power])
     
     return(
         <> 
@@ -86,7 +86,7 @@ const BankButton = () => {
         else{
             setFloat("right")
         }
-    })
+    }, [state.bank])
 
     const toggleBank = () => { 
         if(state.bank == 1){ 

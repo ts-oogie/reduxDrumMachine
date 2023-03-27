@@ -1,6 +1,5 @@
 import PadBtn from './padButton'  
 import useKey2Instrument from '../hooks/usekey2Instrument'
-import {useEffect} from 'react'
 import {useSelector} from "react-redux"
 
 const PadGrid = () => {
@@ -46,7 +45,7 @@ const PadGrid = () => {
             </div>
             <div className="flex-container" style={padGridStyle}>
                 <PadBtn label="Z"/>
-                <PadBtn label="W"/>
+                <PadBtn label="X"/>
                 <PadBtn label="C"/>
             </div>
         </div>

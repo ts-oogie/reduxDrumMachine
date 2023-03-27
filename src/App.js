@@ -1,13 +1,8 @@
-import './scss/dmStyle.scss';
-import { useSelector } from "react-redux"
-import { useEffect } from 'react'
- 
+import './scss/dmStyle.scss' 
 import PadGrid from './components/padGrid'
 import ControlGrid from './components/controlGrid'
  
 function App() {   
-
-  const state = useSelector((state) => state) 
 
   const dmStyle = {
     width : "50%",
