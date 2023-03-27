@@ -32,6 +32,12 @@ const PadBtn = ({label}) => {
         
     const dispatch = useDispatch()
 
+    document.addEventListener("keydown", (e) => {
+        e.stopImmediatePropagation()
+        dispatch(playKey(e.key))  
+        
+    })
+
     function dispatchNote () {  
           
         //1. useEffect sets thisLabel on load
@@ -40,14 +46,13 @@ const PadBtn = ({label}) => {
         //4. sound is set to the src of the element
 
         dispatch(playKey(thisLabel))   
-        console.log(thisLabel)
-    }   
+
+    }    
 
     useEffect(()=>{    
-        console.log("called")
+        
         switch(state.key){
-            case 'Q' :
-                console.log("bass")
+            case 'Q' : 
                 setSound(bass)
                 break
             case 'W' :
@@ -111,30 +116,15 @@ const PadBtn = ({label}) => {
         else {
             const uc = label.toLowerCase()
             setThisLabel(uc) 
-        } 
-
-        
-
-        /*if(audio !== null) { 
-            playPromise = audio.play()
-        }
-
-        if(playPromise !== null){
-             
-            playPromise.then((res) => {
-              console.log(res)
-            })
-        }*/
+        }  
 
         fetch(sound)
             .then(res => res.blob())
-            .then(blob => {  
-                
+            .then(blob => {   
                 audio.play()
             })
             .then(_ => {
-                //AUDIO PLAYBACK STARTED 
-                 
+                //AUDIO PLAYBACK STARTED  
             })
             .catch(e => {
                 //audio playback failed
@@ -144,9 +134,9 @@ const PadBtn = ({label}) => {
     }, [state, label, sound])
 
     return(
-        <div className="padbtn" id={thisLabel} onClick={dispatchNote}>
+        <div className="drum-pad" id={thisLabel} onClick={dispatchNote}>
             <h1>{thisLabel}</h1>
-            <audio id="audio" src={sound} type="audio/wav"></audio>
+            <audio id="audio" className="clip" src={sound} type="audio/wav"></audio>
         </div>
     )
 }
