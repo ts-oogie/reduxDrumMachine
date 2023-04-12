@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.854bcd52.css",
+    "main.js": "/static/js/main.84df9a0e.js",
+    "static/media/orchestrahit.wav": "/static/media/orchestrahit.c229ee03585142d71f55.wav",
+    "static/media/crash.wav": "/static/media/crash.13256a5098b2be403258.wav",
+    "static/media/bass.wav": "/static/media/bass.3d1875eca46505998f48.wav",
+    "static/media/snare.wav": "/static/media/snare.9b95a6b034f6e33ccacf.wav",
+    "static/media/bass2.wav": "/static/media/bass2.df38bf9dc1c9e3e29b9d.wav",
+    "static/media/reggae.wav": "/static/media/reggae.b48810ab3db0d31403c8.wav",
+    "static/media/snare2.wav": "/static/media/snare2.ac269d44e0863971831b.wav",
+    "static/media/snare3.wav": "/static/media/snare3.437f1f6cc9f7c6f1ea97.wav",
+    "static/media/beat.wav": "/static/media/beat.499d4c67cdfe3d413207.wav",
+    "static/media/timpani.wav": "/static/media/timpani.0c1f43c2fdad5cd26c4e.wav",
+    "static/media/bass3.wav": "/static/media/bass3.5feeada7492cd110d10d.wav",
+    "static/media/bongo1.wav": "/static/media/bongo1.edfa48531586bf3ec99d.wav",
+    "static/media/circleSymbol.jpg": "/static/media/circleSymbol.ad8586065eb74627d1a1.jpg",
+    "static/media/plastic.wav": "/static/media/plastic.8efb935c7422c3e3f6fa.wav",
+    "static/media/metal.wav": "/static/media/metal.0f953fa0bb9956cc6ce5.wav",
+    "static/media/bass4.wav": "/static/media/bass4.14d0140be1b512a28aa0.wav",
+    "static/media/congo.wav": "/static/media/congo.26ae31610f16caf722cb.wav",
+    "static/media/bongo2.wav": "/static/media/bongo2.0458e950a1cbd84a90ad.wav",
+    "static/media/tambourine.wav": "/static/media/tambourine.fa0edc7e06faa3ece1e5.wav",
+    "index.html": "/index.html",
+    "main.854bcd52.css.map": "/static/css/main.854bcd52.css.map",
+    "main.84df9a0e.js.map": "/static/js/main.84df9a0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.854bcd52.css",
+    "static/js/main.84df9a0e.js"
+  ]
+}

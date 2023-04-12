@@ -34,8 +34,7 @@ const PadBtn = ({label}) => {
 
     document.addEventListener("keydown", (e) => {
         e.stopImmediatePropagation()
-        dispatch(playKey(e.key))  
-        
+        dispatch(playKey(e.key))   
     })
 
     function dispatchNote () {  
